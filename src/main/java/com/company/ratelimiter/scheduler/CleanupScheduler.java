@@ -1,0 +1,18 @@
+package com.company.ratelimiter.scheduler;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+@Slf4j
+@Component
+public class CleanupScheduler {
+
+    @Scheduled(fixedRate = 300000)
+    public void cleanup() {
+
+        log.info(
+                "Running cleanup scheduler..."
+        );
+    }
+}
